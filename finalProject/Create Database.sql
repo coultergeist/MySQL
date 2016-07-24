@@ -166,6 +166,35 @@ ALTER TABLE `Block`
 	
 	
 -- -----------------------------------------------------------------------------
+-- CREATE TRIGGER:	
+-- Create trigger to remain with table
+
+
+
+
+DELIMITER $$
+CREATE TRIGGER `Delete_User`
+BEFORE DELETE ON `User` FOR EACH ROW
+
+BEGIN
+	DELETE FROM `Photograph` 
+		WHERE `ID_User`=`OLD`.`ID_User`;
+	DELETE FROM `Personal_Answers` 
+		WHERE `ID_User`=`OLD`.`ID_User`;
+	DELETE FROM `Preferences` 
+		WHERE `ID_User`=`OLD`.`ID_User`;
+	DELETE FROM `Block` 
+		WHERE `ID_User_Blocker`=`OLD`.`ID_User` OR `ID_User_Blockee`=`OLD`.`ID_User`;
+	DELETE FROM `Messages` 
+		WHERE `ID_User_Sender`=`OLD.`ID_User` OR `ID_User_Receiver`=`OLD`.`ID_User`;
+END $$
+
+DELIMITER ;	
+
+	
+	
+	
+-- -----------------------------------------------------------------------------
 -- REFERENCE TABLES:
 
 
