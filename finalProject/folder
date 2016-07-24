@@ -1,0 +1,33 @@
+Final Project: The Dating Database (Below are the requirements as written as the instructor)
+Possible Points of Project: 60
+My Project Score: 85
+
+PROMPT
+ Turn in a proposal that includes a conceptual level design document as well as the SQL needed to completely create a dating database, also show the SQL needed to "do" each of the use cases related to the points below.
+
+REQUIREMENTS:
+Some user information is secure ad should be stored separately from information that other users can see (like user’s hashed password, users email address).
+There should be some information required for all users including some questions mandatory at sign-up, such as Gender, Age, and Geolocation (in longitude and latitude).
+Users should be able to provide, or not provide, answers to any number of other optional questions.
+The database should allow multiple photographs of a user.
+The system’s Administrators should be able to add new questions to be asked at any time such as smoking preference, height, income level, education level, etc.
+A user should be able to store preferences/criteria of who they are looking for.
+A user should be able to send messages to another user.
+A user should be able to block another user that they don’t want to see, or be seen by.
+A user should be able to “get” a complete profile of another user based on the Uuid of that user.
+
+EXTRA CREDIT:
+A user should be able to “final people that match” based on their criteria, including a list of Uuids of users matching the criteria.
+If you do this, you can assume that that there is a Stored procedure called DistanceBetween (Latitude1, Longitude1, Latitude2, Longitude2) that calculates the distance between 2 given users and returns it in km.
+
+ADDITIONAL EXTRA CREDIT:
+The creation of the stored procedure to calculate the DistanceBetween two users mentioned above.
+
+Things to consider and include:
+Presentation
+Documentation (including the enumeration of reference tables)
+Conceptual level ERD
+SQL to create all the tables (including reference tables) and relationships
+SQL to load test data into the database
+Identification of Use Cases
+SQL (and possible business rules required) to perform each Use Case
