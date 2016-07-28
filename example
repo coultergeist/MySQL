@@ -1,0 +1,17 @@
+/*
+Proposal from The Best Co. to engineers at "Date-A-Base" website. 
+Database needs: Store User information, send messages, block/save other users, upload photographs, etc. 
+IMPORTANT: Security is a major concern here so not all information will be visible by everyone.
+Database Administrator: Danielle Coulter, Employee ID: 89456. Seattle, WA.
+Database created: May 23, 2016
+*/
+
+CREATE TABLE `User`
+	`ID_User` BIGINT(16) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT 'Private Unique indentifier for each user',  
+	`Uuid_User` VARCHAR(255) NOT NULL COMMENT 'Public identifier for users',
+	`Date_Joined` DATE NOT NULL COMMENT 'Date user joined site',
+	`Last_Name` VARCHAR(255) NOT NULL COMMENT 'Users last name',
+	`Email` VARCHAR(15) NOT NULL COMMENT 'Users email address',
+	`Password` VARCHAR(255) NOT NULL COMMENT 'Users login password',
+	`Date_Created` DATETIME NOT NULL COMMENT 'The date the user created their account'
+)ENGINE INNODB COMMENT 'The information of all users of Blog-ction';
